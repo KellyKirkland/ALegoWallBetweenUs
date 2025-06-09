@@ -1,62 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Multilevel Modelling Hub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background: #f9f9fb;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fb;
       color: #333;
-      line-height: 1.6;
-      padding: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
       max-width: 800px;
-      margin: auto;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
     }
-    h1, h2 {
-      color: #2c3e50;
-    }
+
     h1 {
-      font-size: 2.5em;
+      font-size: 2.8rem;
+      font-weight: 700;
       margin-bottom: 20px;
+      color: #1a1a1a;
     }
+
     p {
-      margin-bottom: 25px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 40px;
     }
+
     .nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+      display: grid;
+      gap: 20px;
     }
+
     .nav-links a {
-      background: #e3f2fd;
-      color: #0d47a1;
+      display: block;
+      padding: 18px 24px;
+      border-radius: 14px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       text-decoration: none;
-      padding: 15px 20px;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: background 0.3s;
+      font-weight: 600;
+      color: #1a237e;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
+
     .nav-links a:hover {
-      background: #bbdefb;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      background-color: #f1f4ff;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Welcome to the Multilevel Modelling Hub</h1>
+    <p>This site is your central guide to learning multilevel modelling (MLM) for psychology research. Explore topics step-by-step — from understanding MLM to using Jamovi with your own data.</p>
 
-  <h1>Resources for Learning Multilevel Modelling</h1>
-  <p>This site contains a structured set of resources to help honours students understand and apply multilevel modelling in their research. Whether you're new to the concept or ready to run analyses in Jamovi, this is your one-stop shop for guidance.</p>
-
-  <div class="nav-links">
-    <a href="https://mlm-guide-psych-students-6qu7fap.gamma.site/">Understanding Multilevel Modelling</a>
-    <a href="why.html">Why Do We Need Multilevel Modelling?</a>
-    <a href="jamovi.html">The Ins and Outs of Jamovi</a>
-    <a href="datafile.html">Getting Familiar with Your Datafile</a>
-    <a href="analysis.html">Running Your Analyses</a>
+    <div class="nav-links">
+      <a href="https://mlm-guide-psych-students-6qu7fap.gamma.site/">Understanding Multilevel Modelling</a>
+      <a href="why.html">Why Do We Need Multilevel Modelling?</a>
+      <a href="jamovi.html">The Ins and Outs of Jamovi</a>
+      <a href="datafile.html">Getting Familiar with Your Datafile</a>
+      <a href="analysis.html">Running Your Analyses</a>
+    </div>
   </div>
-
 </body>
 </html>
-
