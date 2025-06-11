@@ -18,12 +18,12 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 60px 20px;
-      text-align: center;
     }
 
     h1 {
       font-size: 2.8rem;
       font-weight: 700;
+      text-align: center;
       margin-bottom: 12px;
       color: #1a1a1a;
     }
@@ -31,31 +31,47 @@
     h2 {
       font-size: 1.4rem;
       font-weight: 400;
+      text-align: center;
       color: #555;
       margin-top: 0;
       margin-bottom: 40px;
     }
 
-    .nav-links {
-      display: grid;
+    .module-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       gap: 20px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
     }
 
-    .nav-links a {
-      display: block;
-      padding: 20px 24px;
-      border-radius: 12px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-      text-decoration: none;
+    .module-label {
+      flex: 0 0 100px;
       font-weight: 600;
       font-size: 1.1rem;
-      color: #1a237e;
+      color: #444;
+    }
+
+    .module-box {
+      flex: 1;
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
       transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
 
-    .nav-links a:hover {
-      transform: translateY(-3px);
+    .module-box a {
+      text-decoration: none;
+      color: #1a237e;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: block;
+    }
+
+    .module-box:hover {
+      transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       background-color: #f0f3ff;
     }
@@ -64,15 +80,22 @@
       font-size: 0.95rem;
       color: #888;
       margin-top: 40px;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2.2rem;
+      .module-row {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .nav-links a {
-        font-size: 1rem;
+      .module-label {
+        flex: none;
+        margin-bottom: 4px;
+      }
+
+      .module-box {
+        width: 100%;
       }
     }
   </style>
@@ -82,16 +105,43 @@
     <h1>Multilevel Modelling Hub</h1>
     <h2>Your step-by-step guide to mastering MLM for psychology research</h2>
 
-    <div class="nav-links">
-      <a href="https://mlm-guide-psych-students-6qu7fap.gamma.site/">MODULE 1: Understanding the ABCs of Multilevel Modelling</a>
-      <a href="https://lego-study-mlm-9em7ii0.gamma.site/">MODULE 2: Multilevel Modelling for the LEGO Study</a>
-      <a href="jamovi.html">MODULE 3: Making Sense of Jamovi for Data Analysis</a>
-      <a href="datafile.html">MODULE 4: Getting Familiar with Your Datafile</a>
-      <a href="analysis.html">MODULE 5: Running & Making Sense of Your Analyses</a>
+    <div class="module-row">
+      <div class="module-label">Module 1</div>
+      <div class="module-box">
+        <a href="https://mlm-guide-psych-students-6qu7fap.gamma.site/">Understanding the ABCs of Multilevel Modelling</a>
+      </div>
+    </div>
+
+    <div class="module-row">
+      <div class="module-label">Module 2</div>
+      <div class="module-box">
+        <a href="https://lego-study-mlm-9em7ii0.gamma.site/">Multilevel Modelling for the LEGO Study</a>
+      </div>
+    </div>
+
+    <div class="module-row">
+      <div class="module-label">Module 3</div>
+      <div class="module-box">
+        <a href="jamovi.html">Making Sense of Jamovi for Data Analysis</a>
+      </div>
+    </div>
+
+    <div class="module-row">
+      <div class="module-label">Module 4</div>
+      <div class="module-box">
+        <a href="datafile.html">Getting Familiar with Your Datafile</a>
+      </div>
+    </div>
+
+    <div class="module-row">
+      <div class="module-label">Module 5</div>
+      <div class="module-box">
+        <a href="analysis.html">Running & Making Sense of Your Analyses</a>
+      </div>
     </div>
 
     <div class="note">
-      Modules 3–5 are coming soon. Stay tuned!
+      Modules 3–5 are still in development. Stay tuned!
     </div>
   </div>
 </body>
